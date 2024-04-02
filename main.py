@@ -86,6 +86,8 @@ class LootBoxOpener:
                 print(f"{get_timestamp()} {red} An Unknown Item Was Received.")
         else:
             print(f'{get_timestamp()} {red} An Error Occurred : {response.status_code} - {response.text}')
+        if not 0 in self.opened_items.values():
+            print(f"{red}You Got The {green}Clown Reward{yellow}!!!")
 
 def dostats(lootboxopener):
     count = lootboxopener.opened
