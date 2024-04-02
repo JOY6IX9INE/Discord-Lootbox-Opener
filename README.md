@@ -6,10 +6,10 @@ This Python script allows users to automate the process of opening lootboxes in 
 
 ## Features
 
-- **Automatic Lootbox Opening**: The script continuously sends requests to the Discord API to open lootboxes.
-- **Response Processing**: It parses the responses from the API to determine the outcome of each lootbox opening.
-- **Error Handling**: The script handles rate limiting and unknown errors gracefully, providing informative messages to the user.
-- **Colorful Console Output**: ANSI color codes are used to provide colorful and visually appealing console output.
+- **Automatic Lootbox Opening** : The script continuously sends requests to the Discord API to open lootboxes.
+- **Response Processing** : It parses the responses from the API to determine the outcome of each lootbox opening.
+- **Error Handling** : The script handles rate limiting and unknown errors gracefully, providing informative messages to the user.
+- **Colorful Console Output** : ANSI color codes are used to provide colorful and visually appealing console output.
 
 ## Prerequisites
 
