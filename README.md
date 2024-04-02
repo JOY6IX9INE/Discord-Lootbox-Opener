@@ -21,9 +21,9 @@ This Python script allows users to automate the process of opening lootboxes in 
 1. Install Python 3.x on your system if you haven't already.
 2. Install the `tls_client` library by running `pip install tls_client`.
 3. Clone this repository to your local machine.
-4. Open a terminal or command prompt and navigate to the directory containing the script.
-5. Run the script by executing the command `python lootbox_opener.py`.
-6. Sit back and watch as the script automatically opens lootboxes in Discord.
+4. Run the `start.bat` file to automatically install dependencies and run the script.
+5. Sit back and watch as the script automatically opens lootboxes in Discord.
+
 
 # Disclaimer
 This tool is created for educational purposes and ethical use only. Any misuse of this tool for malicious purposes is not condoned. The developers of this tool are not responsible for any illegal or unethical activities carried out using this tool.
