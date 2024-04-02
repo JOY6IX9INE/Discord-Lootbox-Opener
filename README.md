@@ -25,17 +25,7 @@ This Python script allows users to automate the process of opening lootboxes in 
 5. Run the script by executing the command `python lootbox_opener.py`.
 6. Sit back and watch as the script automatically opens lootboxes in Discord.
 
-## Configuration
-
-- Modify the `headers` dictionary in the script to include your Discord authorization token and any other necessary headers.
-- Customize the conditions in the script to match the lootbox items you expect to receive.
-
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+# Disclaimer
+This tool is created for educational purposes and ethical use only. Any misuse of this tool for malicious purposes is not condoned. The developers of this tool are not responsible for any illegal or unethical activities carried out using this tool.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=JOY6IX9INE/Discord-Lootbox-Opener&type=Date)](https://star-history.t9t.io/#JOY6IX9INE/Discord-Lootbox-Opener&Date)
