@@ -38,7 +38,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgements
-
-- Special thanks to the creators and maintainers of the `tls_client` library.
-- This project was inspired by the desire to automate mundane tasks in Discord.
+[![Star History Chart](https://api.star-history.com/svg?repos=JOY6IX9INE/Discord-Lootbox-Opener&type=Date)](https://star-history.t9t.io/#JOY6IX9INE/Discord-Lootbox-Opener&Date)
