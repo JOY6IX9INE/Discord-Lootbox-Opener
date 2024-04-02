@@ -2,6 +2,8 @@ import tls_client
 import time
 import datetime
 import os
+import random
+import sys
 
 red = '\x1b[31m(-)\x1b[0m'
 blue = '\x1b[34m(+)\x1b[0m'
@@ -33,6 +35,19 @@ class LootBoxOpener:
         "1214340999644446727": "OHHHHH BANANA"
     }
 
+    opened_items = {
+        "1214340999644446726": 0,
+        "1214340999644446724": 0,
+        "1214340999644446722": 0,
+        "1214340999644446720": 0,
+        "1214340999644446725": 0,
+        "1214340999644446723": 0,
+        "1214340999644446721": 0,
+        "1214340999644446728": 0,
+        "1214340999644446727": 0
+    }
+    opened = 0
+    
     def __init__(self, discord_session, token):
         self.discord_session = discord_session
         self.token = token
@@ -64,20 +79,39 @@ class LootBoxOpener:
         elif response.status_code == 200:
             opened_item = response.json().get('opened_item')
             if opened_item in self.lootbox_items:
+                self.opened_items[opened_item] += 1
+                self.opened += 1
                 print(f"{get_timestamp()} {green} Successfully Opened A Lootbox : {self.lootbox_items[opened_item]}")
             else:
                 print(f"{get_timestamp()} {red} An Unknown Item Was Received.")
         else:
             print(f'{get_timestamp()} {red} An Error Occurred : {response.status_code} - {response.text}')
 
+def dostats(lootboxopener):
+    count = lootboxopener.opened
+    items = lootboxopener.opened_items
+    itemmap = lootboxopener.lootbox_items
+    print(f"Opened {count} Lootboxes.")
+    for item, itemcount in items.items():
+        print(f"Opened {itemcount} of {itemmap[item]}")
+    for item, itemcount in items.items():
+        print(f"Item {itemmap[item]} has a chance of {(itemcount/count)*100}%")
+
+
 def main():
-    token = input(f"{get_timestamp()} {blue} Please Enter Your Account Token : ")
+    if len(sys.argv) == 2:
+        token = sys.argv[1]
+    else:
+        token = input(f"{get_timestamp()} {blue} Please Enter Your Account Token : ")
     discord_session = DiscordSession()
     lootbox_opener = LootBoxOpener(discord_session, token)
-    
-    while True:
-        lootbox_opener.open_lootbox()
-        time.sleep(1)
+
+    try:
+        while True:
+            lootbox_opener.open_lootbox()
+            time.sleep(2+random.uniform(2,4))
+    except KeyboardInterrupt:
+        dostats(lootbox_opener)
 
 if __name__ == "__main__":
     os.system("cls")
