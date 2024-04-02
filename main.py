@@ -108,12 +108,39 @@ def main():
     discord_session = DiscordSession()
     lootbox_opener = LootBoxOpener(discord_session, token)
 
-    try:
-        while True:
-            lootbox_opener.open_lootbox()
-            time.sleep(2+random.uniform(2,4))
-    except KeyboardInterrupt:
-        dostats(lootbox_opener)
+    mode = int(input("Mode? 0 is get me boxes 1 is collect statistics: "))
+    if mode == 0:
+        try:
+            while True:
+                lootbox_opener.open_lootbox()
+                time.sleep(2+random.uniform(2,4))
+        except KeyboardInterrupt:
+            dostats(lootbox_opener)
+    elif mode == 1:
+        for i in range(1, 1000000+1):
+                lootbox_opener.open_lootbox()
+                time.sleep(2+random.uniform(2,4))
+                if i == 10:
+                    print("Results for 10:")
+                    dostats(lootbox_opener)
+                if i == 100:
+                    print("Results for 100:")
+                    dostats(lootbox_opener)
+                if i == 1000:
+                    print("Results for 1000:")
+                    dostats(lootbox_opener)
+                if i == 10000:
+                    print("Results for 10000:")
+                    dostats(lootbox_opener)
+                if i == 100000:
+                    print("Results for 100000:")
+                    dostats(lootbox_opener)
+                if i == 1000000:
+                    print("Results for 1000000:")
+                    dostats(lootbox_opener)
+    else:
+        print("invalid mode!")
+
 
 if __name__ == "__main__":
     os.system("cls")
