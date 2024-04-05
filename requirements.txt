@@ -1,1 +1,2 @@
 tls_client
+typing-extensions
