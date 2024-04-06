@@ -19,11 +19,10 @@ This Python script allows users to automate the process of opening lootboxes in 
 ## Usage
 
 1. Install Python 3.x on your system if you haven't already.
-2. Install the libraries by running `pip install -r requirements.txt`.
-3. Clone this repository to your local machine.
-4. Run the `start.bat` file to automatically install dependencies and run the script.
-5. Paste your account token when prompted and press enter.
-6. Sit back and watch as the script automatically opens lootboxes in Discord.
+2. Clone this repository to your local machine.
+3. Run the `start.bat` file to automatically install dependencies and run the script.
+4. Paste your account token when prompted and press enter.
+5. Sit back and watch as the script automatically opens lootboxes in Discord.
 
 
 # Disclaimer
