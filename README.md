@@ -19,7 +19,7 @@ This Python script allows users to automate the process of opening lootboxes in 
 ## Usage
 
 1. Install Python 3.x on your system if you haven't already.
-2. Install the `tls_client` library by running `pip install tls_client`.
+2. Install the libraries by running `pip install -r requirements.txt`.
 3. Clone this repository to your local machine.
 4. Run the `start.bat` file to automatically install dependencies and run the script.
 5. Paste your account token when prompted and press enter.
