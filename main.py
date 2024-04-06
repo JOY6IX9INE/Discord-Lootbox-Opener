@@ -60,11 +60,11 @@ class LootBoxOpener:
         response = self.discord_session.post('https://discord.com/api/v9/users/@me/lootboxes/open', headers=self.headers)
         if 'rate limited' in response.text:
             print(f"{get_timestamp()} {yellow} You Are Being Rate Limited!")
-            time.sleep(2)
         elif response.status_code == 200:
             opened_item = response.json().get('opened_item')
             if opened_item in self.lootbox_items:
                 print(f"{get_timestamp()} {green} Successfully Opened A Lootbox : {self.lootbox_items[opened_item]}")
+                time.sleep(10)  # Adjusted to sleep for approximately 10 seconds
             else:
                 print(f"{get_timestamp()} {red} An Unknown Item Was Received.")
         else:
