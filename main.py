@@ -65,6 +65,7 @@ class LootBoxOpener:
             opened_item = response.json().get('opened_item')
             if opened_item in self.lootbox_items:
                 print(f"{get_timestamp()} {green} Successfully Opened A Lootbox : {self.lootbox_items[opened_item]}")
+                time.sleep(random.uniform(7, 10))
             else:
                 print(f"{get_timestamp()} {red} An Unknown Item Was Received.")
         else:
