@@ -1,7 +1,7 @@
 import tls_client
 import time
 import datetime
-import os
+import os, random
 
 red = '\x1b[31m(-)\x1b[0m'
 blue = '\x1b[34m(+)\x1b[0m'
